@@ -42,6 +42,14 @@ export default defineType({
             },
         }),
         defineField({
+            name: 'meta',
+            title: 'Meta',
+            type: 'image',
+            options: {
+                hotspot: true,
+            },
+        }),
+        defineField({
             name: 'categories',
             title: 'Categories',
             type: 'array',
@@ -63,7 +71,7 @@ export default defineType({
         select: {
             title: 'title',
             author: 'author.name',
-            media: 'mainImage',
+            media: 'miniature',
         },
         prepare(selection) {
             const { author } = selection
